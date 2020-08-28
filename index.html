@@ -1,5 +1,92 @@
 <link rel="stylesheet" href="styles.css">
+<head>
+  <title>
+    FullStack Developer
+  </title>
+  <link rel="shortcut icon" type="image/x-icon" href="src/icon.png">
+  <script src="https://kit.fontawesome.com/1ccd678c9e.js" crossorigin="anonymous"></script>
+</head>
+
 <div class="container"><img class="background" src="https://cdn.donmai.us/original/6b/78/__hakurei_reimu_touhou_drawn_by_kieta__6b7858c3798b5d0d1afb9f67bf43e2d5.jpg"/>
+  <!-- Called of font style  file -->
+  <link rel="stylesheet" href="styles.css">    
+  <div class="plx-card gold">
+      <div class="pxc-avatar"><img src="src/Pic.jpg"/></div>
+      <div class="pxc-subcard">
+        <div class="pxc-title">Full Stack Developer || DevOps Specialist || Unity Developer</div>
+        <div class="pxc-sub">  </div>
+        <div class="pxc-feats">
+          I have always been fascinated by game development and its activities and the like ... <br>I have some projects that are still unfinished due to lack of time and why I don't have the courage to continue developing games on my own ... currently focused on getting knowledge certifications of Unity 3D from both Programmer and Gameplay Programmer ...
+I am currently working on my first job at Foxconn playing the role of full stack developer, working on both the front and the back end, and on the front I am currently working using Angular 2 and on the back I am switching between C #, ASP, NET, Python and Django... 
+        </div>
+        <div class="pxc-tags">
+          <div>Docker</div>
+          <div>Unity</div>
+          <div>ASP.NET</div>
+          <div>Python</div>
+          <div>Django</div>
+          <div>Node.JS</div>
+          <div>Ruby</div>
+          <div>MongoDB</div>
+          <div>Oracle</div>
+        </div>
+        <div class="bottom-row">
+          <div class="links"><a href="https://www.linkedin.com/in/caio-viga-775369185/" title="LinkedIn"><i class="fab fa-linkedin-in"> </i></a><a href="https://github.com/iVega123" title="GitHub"><i class="fab fa-github"></i></a><a href="https://gitlab.com/iVega123" title="GitLab"><i class="fab fa-gitlab"></i></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="player">
+      <div id="info" class="info">
+        <span class="artist">Touhou OSTs</span>
+        <span class="name">Only the Best</span>
+        <div class="progress-bar">
+          <div class="bar"></div>
+        </div>
+      </div>
+      <div id="control-panel" class="control-panel">
+        <div class="album-art"></div>
+        <div class="controls">
+          <div class="prev"></div>
+          <div id="play" class="play">
+                </div>
+          <div class="next"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+    
+    class musicPlayer {
+      constructor() {
+            var audio = new Audio('music.mp3');
+        this.play = this.play.bind(this, audio);
+        this.playBtn = document.getElementById('play');
+        this.playBtn.addEventListener('click', this.play);
+        this.controlPanel = document.getElementById('control-panel');
+            this.infoBar = document.getElementById('info');
+    
+      }
+    
+      play(audio) {
+        let controlPanelObj = this.controlPanel,
+        infoBarObj = this.infoBar
+        Array.from(controlPanelObj.classList).find(function(element){
+              return element !== "active" ? controlPanelObj.classList.add('active') : 		controlPanelObj.classList.remove('active');
+          });
+        
+        Array.from(infoBarObj.classList).find(function(element){
+              return element !== "active" ? infoBarObj.classList.add('active') : 		infoBarObj.classList.remove('active');
+                });
+                if(audio.paused){
+                    audio.play();
+                }else{
+                    audio.pause();
+                }
+      }
+    }
+    
+    const newMusicplayer = new musicPlayer();
+    </script>
+    
   <div class="circle-container">
     <div class="circle"></div>
   </div>
